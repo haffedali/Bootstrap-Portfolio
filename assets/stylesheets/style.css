@@ -1,0 +1,105 @@
+/*********************************************
+    COLORS
+    #FFC15E;
+    #EF6461;
+    #FFD9CE;
+    #FBFEFB;
+    #394648;
+*********************************************/
+
+body {
+  background-color: #fbfefb;
+  color: #394648;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: #394648;
+  font-size: 1.25rem;
+}
+
+.header {
+  background-color: #ffd9ce;
+  background-image: linear-gradient(315deg, #ffd9ce 0%, #f78a8a 74%);
+}
+
+/***** NAVIGATION *****/
+.navbar a:hover {
+  color: #ef6461;
+}
+
+.brand-light {
+  color: #fbfefb;
+  font-family: "Satisfy", cursive;
+  font-size: 2rem;
+}
+
+.navbar-toggler {
+  color: #fbfefb;
+}
+/***** HEADER *****/
+.jumbotron-fluid {
+  text-align: center;
+  padding: 40px 0 80px;
+}
+
+.btn {
+  background-color: transparent;
+  border: 2px solid #fbfefb;
+  color: #fbfefb;
+}
+
+.btn:hover {
+  background-color: #fbfefb;
+  border: 2px solid #fbfefb;
+  color: #ef6461;
+}
+
+.lg-paragraph {
+  font-size: 1.5rem;
+}
+
+/***** PORTFOLIO PREVIEW *****/
+h1 {
+  font-size: 2.25rem;
+}
+
+h5 {
+  color: #ffc15e;
+  font-size: 1.5rem;
+}
+
+.container {
+  background-color: #fbfefb;
+  margin: 60px auto 80px auto;
+}
+
+.card {
+  background-image: url();
+  border: none;
+  border-radius: 5%;
+}
+
+.section-header {
+  text-align: center;
+}
+
+.section-paragraph {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.portfolio-link:hover {
+  color: #ef6461;
+  text-decoration: none;
+}
+
+/***** FOOTER *****/
+.fixed-bottom {
+  background-color: #394648;
+  color: #fbfefb;
+}
+
+/***** PORTFOLIO *****/
+
+/***** CONTACT *****/
