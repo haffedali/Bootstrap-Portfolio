@@ -5,12 +5,20 @@
     #FFD9CE;
     #FBFEFB;
     #394648;
-*********************************************/
 
+    GRADIENTS
+    rgba(199, 255, 131, 0.8), rgba(143, 221, 49, 0.8)
+    rgba(139, 220, 255, 0.8), rgba(49, 169, 221, 0.8)
+    rgba(255, 225, 176, 0.8), rgba(255, 193, 94, 0.8)
+*********************************************/
+* {
+  box-sizing: border-box;
+}
 body {
   background-color: #fbfefb;
   color: #394648;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif; /* Lato? */
+  line-height: 1.7;
 }
 
 a {
@@ -18,14 +26,18 @@ a {
   font-size: 1.25rem;
 }
 
-.header {
-  background-color: #ffd9ce;
-  background-image: linear-gradient(315deg, #ffd9ce 0%, #f78a8a 74%);
+/***** NAVIGATION *****/
+.navbar a {
+  font-weight: 800;
 }
 
-/***** NAVIGATION *****/
 .navbar a:hover {
   color: #ef6461;
+}
+
+.logo {
+  color: #fbfefb;
+  font-size: 3rem;
 }
 
 .brand-light {
@@ -37,51 +49,214 @@ a {
 .navbar-toggler {
   color: #fbfefb;
 }
+
 /***** HEADER *****/
+.header {
+  background-image: linear-gradient(
+      rgba(255, 217, 206, 0.8),
+      rgba(247, 138, 138, 0.8)
+    ),
+    url("../images/workspace_02.jpg");
+  background-size: cover;
+  background-position: top; /* ensures that image will not move and stay centered on top when browser window resizes */
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 75vh,
+    0 100%
+  ); /* cuts image: polygon(top-left x y, top-right x y, bottom-right x y, bottom-left x y) */
+  height: 90vh;
+}
+
 .jumbotron-fluid {
   text-align: center;
   padding: 40px 0 80px;
 }
 
-.btn {
-  background-color: transparent;
-  border: 2px solid #fbfefb;
+.heading-primary {
   color: #fbfefb;
+  line-height: 6rem;
+  margin: 4rem;
+
+  backface-visibility: hidden; /* stops animation from being "shaky", hides whatever is behind the moving element */
 }
 
-.btn:hover {
+.heading-primary-main {
+  display: block;
+  font-family: "Satisfy", cursive;
+  font-size: 5.4rem;
+
+  animation-name: moveInLeft; /* which animation? */
+  animation-duration: 2s; /* how long? */
+  animation-timing-function: ease-out; /* starts fast, ends slower */
+  /*  animation-delay: --s; when should animation start? 
+      animation-iteration-count: --; how often should animation repeat? 
+      animation-timing-function: --; check MDN for keyword values!
+  */
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 1.5rem;
+  text-transform: uppercase;
+
+  animation-name: moveInRight;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+}
+
+.btn-white:default,
+.btn-white:link,
+.btn-white:visited {
   background-color: #fbfefb;
   border: 2px solid #fbfefb;
+  border-radius: 6.25rem;
   color: #ef6461;
+  display: inline-block;
+  padding: 1rem 2rem;
+  position: relative;
+  text-transform: uppercase;
+  transition: ;
+}
+
+.btn-white:active {
+  transform: translateY(-1px);
+}
+
+.btn-white:hover {
+  box-shadow: 0 0.625rem 1.25rem;
+  transform: translateY(-5px);
+}
+
+.btn-white::after {
+  /* hides behind element */
+  border-radius: 6.25rem;
+  content: ""; /* necessary! */
+  display: inline-block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: -1; /* make sure it's behind the button! */
+}
+
+.profile-img {
+  border: 2px solid #ffc15e;
+  border-radius: 50%;
+  padding: 5px;
+  width: 85%;
 }
 
 .lg-paragraph {
   font-size: 1.5rem;
 }
 
-/***** PORTFOLIO PREVIEW *****/
-h1 {
-  font-size: 2.25rem;
-}
+/***** ABOUT ME *****/
 
-h5 {
-  color: #ffc15e;
-  font-size: 1.5rem;
-}
-
-.container {
+.section-about {
+  text-align: center;
   background-color: #fbfefb;
-  margin: 60px auto 80px auto;
+  padding: 25vh 10vw 35vh;
+  margin-top: -15vh;
+}
+
+/***** NEW SECTION *****/
+
+.section-something {
+  background-color: rgba(255, 217, 206);
+  text-align: center;
+  padding: 20vh 10vw 40vh;
+  margin-top: -15vh;
+  transform: skewY(-4deg); /* rotates section, as well as content */
+}
+
+.section-heading {
+  color: #ef6461;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+/***** PORTFOLIO PREVIEW *****/
+.section-project-preview {
+  text-align: center;
+  background-color: #fbfefb;
+  padding: 20vh 10vw 15vh;
+  margin-top: -15vh;
+  transform: skewY(-4deg);
+}
+
+.project-container {
+  margin: 10vh 0 5vh;
 }
 
 .card {
-  background-image: url();
   border: none;
   border-radius: 5%;
 }
 
-.section-header {
-  text-align: center;
+.project-1 {
+  background-image: linear-gradient(
+      rgba(199, 255, 131, 0.8),
+      rgba(143, 221, 49, 0.8)
+    ),
+    url("../images/pro1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.project-2 {
+  background-image: linear-gradient(
+      rgba(255, 225, 176, 0.8),
+      rgba(255, 193, 94, 0.8)
+    ),
+    url("../images/pro2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.project-3 {
+  background-image: linear-gradient(
+      rgba(139, 220, 255, 0.8),
+      rgba(49, 169, 221, 0.8)
+    ),
+    url("../images/pro3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hover-img:hover {
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.4)
+  );
+  color: #394648;
+  text-decoration: none;
+}
+
+.card-body {
+  height: 40vh;
+  padding: 2rem;
+}
+
+.card-title {
+  color: #fbfefb;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.4rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.card-text {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .section-paragraph {
@@ -89,17 +264,95 @@ h5 {
   text-align: center;
 }
 
+.rotated {
+  transform: skewY(4deg);
+}
+
 .portfolio-link:hover {
   color: #ef6461;
   text-decoration: none;
 }
 
+/***** WORK TOGETHER *****/
+.section-contact {
+  background-color: rgba(255, 217, 206);
+  text-align: center;
+  padding: 35vh 10vw 25vh;
+  margin-top: -15vh;
+}
+
+h4 {
+  color: #ef6461;
+  font-family: "Satisfy", cursive;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.btn-default,
+.btn-pink:link,
+.btn-pink:visited {
+  background-color: #ef6461;
+  border: 2px solid #ef6461;
+  border-radius: 6.25rem;
+  color: #fbfefb;
+  display: inline-block;
+  padding: 1rem 2rem;
+  position: relative;
+  text-transform: uppercase;
+  transition: ;
+}
+
 /***** FOOTER *****/
 .fixed-bottom {
   background-color: #394648;
+  border-top: 4px solid #ef6461;
   color: #fbfefb;
+  font-size: 0.75rem;
+  height: 6vh;
+}
+
+.copyright,
+.credit {
+  display: inline-block;
 }
 
 /***** PORTFOLIO *****/
 
 /***** CONTACT *****/
+
+.icons {
+  color: #fbfefb;
+  font-size: 2rem;
+}
+
+.icons:hover {
+  color: #ef6461;
+}
+
+/***** ANIMATIONS *****/
+
+@keyframes moveInLeft {
+  /* for good browser performance only animate two properties */
+  /* starting point */
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+    /* moves on x-achsis, so only specify x*/
+  }
+  /* animation ends at */
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* end at original position */
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
