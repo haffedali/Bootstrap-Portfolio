@@ -107,6 +107,7 @@ a {
   animation-timing-function: ease-out;
 }
 
+.btn-white,
 .btn-white:default,
 .btn-white:link,
 .btn-white:visited {
@@ -288,7 +289,8 @@ h4 {
   margin-bottom: 3rem;
 }
 
-.btn-default,
+.btn-pink,
+.btn-pink:default,
 .btn-pink:link,
 .btn-pink:visited {
   background-color: #ef6461;
@@ -299,9 +301,26 @@ h4 {
   padding: 1rem 2rem;
   position: relative;
   text-transform: uppercase;
-  transition: ;
 }
 
+.btn-white:active {
+  transform: translateY(-1px);
+}
+
+.btn-pink:hover {
+  box-shadow: 0 0.5rem 1.25rem #727272;
+  transform: translateY(-5px);
+}
+
+.btn-pink::after {
+  border-radius: 6.25rem;
+  content: "";
+  display: inline-block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
 /***** FOOTER *****/
 .fixed-bottom {
   background-color: #394648;
@@ -383,14 +402,30 @@ h3 {
 }
 
 /***** CONTACT *****/
-
+.social-media {
+  margin: 5vh 0;
+  text-align: center;
+}
 .icons {
-  color: #fbfefb;
-  font-size: 2rem;
+  color: #ffc15e;
+  font-size: 3rem;
+  margin: 0 0.75rem;
 }
 
 .icons:hover {
   color: #ef6461;
+}
+
+.form {
+  margin-bottom: 10%;
+}
+
+#inputMessage {
+  height: 10rem;
+}
+
+.btn-submit {
+  margin-top: 1.5rem;
 }
 
 /***** NECESSARY MEDIA QUERIES *****/
