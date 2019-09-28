@@ -439,6 +439,20 @@ h3 {
 }
 
 @media screen and (max-width: 768px) {
+  .header {
+    height: 75vh;
+  }
+  .heading-primary {
+    line-height: 3.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .heading-primary-main {
+    font-size: 3rem;
+  }
+  .heading-primary-sub {
+    font-size: 1.35rem;
+    letter-spacing: 0.75rem;
+  }
   .lead {
     margin-top: 10%;
   }
@@ -448,6 +462,9 @@ h3 {
   h3 {
     font-size: 1.5rem;
     letter-spacing: 0.75rem;
+  }
+  .form {
+    margin-bottom: 15%;
   }
 }
 
