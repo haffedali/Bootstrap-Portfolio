@@ -46,10 +46,6 @@ a {
   font-size: 2rem;
 }
 
-.navbar-toggler {
-  color: #fbfefb;
-}
-
 /***** HEADER *****/
 .header {
   background-image: linear-gradient(
@@ -479,6 +475,9 @@ h3 {
   h3 {
     font-size: 1.5rem;
     letter-spacing: 0.75rem;
+  }
+  .form {
+    margin-bottom: 15%;
   }
 }
 
