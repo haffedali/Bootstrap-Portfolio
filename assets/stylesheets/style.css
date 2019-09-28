@@ -470,7 +470,7 @@ h3 {
 
 @media screen and (max-width: 640px) {
   .header {
-    height: 75vh;
+    height: 100%;
   }
   .heading-primary {
     line-height: 3.5rem;
