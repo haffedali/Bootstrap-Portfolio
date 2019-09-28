@@ -318,26 +318,70 @@ h4 {
 
 /***** PORTFOLIO *****/
 
+h3 {
+  color: #ffc15e;
+  letter-spacing: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 8%;
+}
+
 .short {
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   height: 50%;
 }
 
-.heading-short {
-  color: #fbfefb;
-  font-size: 2rem;
-  font-weight: 800;
-  letter-spacing: 1.5rem;
-  line-height: 6rem;
-  margin: 4rem;
-  margin-top: 0.5rem;
-  text-transform: uppercase;
-
-  animation-name: moveInRight;
-  animation-duration: 2s;
-  animation-timing-function: ease-out;
-  backface-visibility: hidden;
+.portfolio-main {
+  margin: 15vh 0;
 }
+
+.pro-summary {
+  height: 18rem;
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 5%;
+}
+
+.pro-img {
+  border: none;
+  border-radius: 5%;
+  height: 18rem;
+  width: 100%;
+  margin-bottom: 5%;
+}
+.pro-one {
+  background-image: url(../images/pro1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.pro-two {
+  background-image: url(../images/pro2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.pro-three {
+  background-image: url(../images/pro3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.pro-four {
+  background-image: url(../images/pro4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.pro-five {
+  background-image: url(../images/pro5.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sm-caption {
+  color: #727272;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
 /***** CONTACT *****/
 
 .icons {
@@ -357,6 +401,10 @@ h4 {
   .card {
     margin-top: 5%;
   }
+  h3 {
+    font-size: 1.5rem;
+    letter-spacing: 0.75rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -365,6 +413,10 @@ h4 {
   }
   .card {
     margin-top: 5%;
+  }
+  h3 {
+    font-size: 1.5rem;
+    letter-spacing: 0.75rem;
   }
 }
 
@@ -388,6 +440,10 @@ h4 {
   }
   .card {
     margin-top: 5%;
+  }
+  h3 {
+    font-size: 1.5rem;
+    letter-spacing: 0.75rem;
   }
 }
 
